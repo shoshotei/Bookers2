@@ -25,8 +25,19 @@
 
              <% if user_signed_in? %>
              <li class="nav-link text-light">
+              <%= link_to "Home", %>
+             </li>
+             <li class="nav-link text-light">
+              <%= link_to "User", %>
+             </li>
+             <li class="nav-link text-light">
+              <%= link_to "Books" books_index_path %>
+             </li>
+             <li class="nav-link text-light">
               <%= link_to "Log out", destroy_user_session_path, method: :delete %>
              </li>
+             
+             
              <% else %>
              <li class="nav-link text-light">
                <%= link_to "Home", root_path %>
